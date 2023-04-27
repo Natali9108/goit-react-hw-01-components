@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
+import { List, Item } from './StatList.styled';
 
-function StatList({ items }) {
+export const StatList = ({ items }) => {
   return (
-    <ul className="stat-list">
+    <List>
       {items.map(item => (
-        <li className="item" key={item.id}>
+        <Item key={item.id}>
           <span className="label">{item.label}</span>
           <span className="percentage">{item.percentage}</span>
-        </li>
+        </Item>
       ))}
-    </ul>
+    </List>
   );
-}
+};
 
 StatList.propTypes = {
   items: PropTypes.arrayOf(
@@ -22,5 +23,3 @@ StatList.propTypes = {
     })
   ),
 };
-
-export default StatList;
