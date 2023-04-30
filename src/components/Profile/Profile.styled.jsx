@@ -10,7 +10,7 @@ export const ProfileCard = styled.div`
   background-color: ${props => props.theme.colors.primaryWhite};
 `;
 
-export const Description = styled.div`
+export const ProfileDescription = styled.div`
   display: flex;
   align-items: center;
   padding: 30px;
@@ -19,21 +19,21 @@ export const Description = styled.div`
   gap: 10px;
 `;
 
-export const Avatar = styled.img`
+export const ProfileAvatar = styled.img`
   margin-bottom: 20px;
   width: 200px;
   height: 200px;
   border-radius: 50%;
 `;
 
-export const UserName = styled.p`
+export const ProfileUserName = styled.p`
   font-size: 28px;
   font-weight: 500;
   letter-spacing: 0.01em;
   color: ${props => props.theme.colors.black};
 `;
 
-export const Tag = styled.p`
+export const ProfileTag = styled.p`
   display: flex;
   align-items: center;
   font-size: 22px;
@@ -41,7 +41,7 @@ export const Tag = styled.p`
   color: ${props => props.theme.colors.userTextColor};
 `;
 
-export const Location = Tag.withComponent('p');
+export const ProfileLocation = ProfileTag.withComponent('p');
 
 export const StatsList = styled.ul`
   display: flex;
@@ -60,18 +60,18 @@ export const StatsItem = styled.li`
   border-right: 1px solid
     ${props => props.theme.colors.statsBorderColor}};
 
-  &:last-child {
+  StatsItem:last-child {
     border: none;
   }
 `;
 
-export const Label = styled.span`
+export const StatsLabel = styled.span`
   font-size: 20px;
   letter-spacing: 0.01em;
   color: ${props => props.theme.colors.userTextColor};
 `;
 
-export const Quantity = styled.span`
+export const StatsQuantity = styled.span`
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.01em;

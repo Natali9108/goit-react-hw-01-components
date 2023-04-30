@@ -2,15 +2,15 @@ import PropTypes from 'prop-types';
 import { BiAt } from 'react-icons/bi';
 import {
   ProfileCard,
-  Description,
-  Avatar,
-  UserName,
-  Tag,
-  Location,
+  ProfileDescription,
+  ProfileAvatar,
+  ProfileUserName,
+  ProfileTag,
+  ProfileLocation,
   StatsList,
   StatsItem,
-  Label,
-  Quantity,
+  StatsLabel,
+  StatsQuantity,
 } from './Profile.styled';
 
 export const Profile = ({
@@ -22,29 +22,29 @@ export const Profile = ({
 }) => {
   return (
     <ProfileCard>
-      <Description>
-        <Avatar src={avatar} alt={username} />
-        <UserName>{username}</UserName>
+      <ProfileDescription>
+        <ProfileAvatar src={avatar} alt={username} />
+        <ProfileUserName>{username}</ProfileUserName>
 
-        <Tag>
+        <ProfileTag>
           <BiAt />
           {tag}
-        </Tag>
-        <Location>{location}</Location>
-      </Description>
+        </ProfileTag>
+        <ProfileLocation>{location}</ProfileLocation>
+      </ProfileDescription>
 
       <StatsList>
         <StatsItem>
-          <Label>Followers</Label>
-          <Quantity>{followers}</Quantity>
+          <StatsLabel>Followers</StatsLabel>
+          <StatsQuantity>{followers}</StatsQuantity>
         </StatsItem>
         <StatsItem>
-          <Label>Views</Label>
-          <Quantity>{views}</Quantity>
+          <StatsLabel>Views</StatsLabel>
+          <StatsQuantity>{views}</StatsQuantity>
         </StatsItem>
         <StatsItem>
-          <Label>Likes</Label>
-          <Quantity>{likes}</Quantity>
+          <StatsLabel>Likes</StatsLabel>
+          <StatsQuantity>{likes}</StatsQuantity>
         </StatsItem>
       </StatsList>
     </ProfileCard>

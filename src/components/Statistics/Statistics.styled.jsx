@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.section`
+export const StatContainer = styled.section`
   padding-top: 30px;
 
   width: 400px;
@@ -8,7 +8,7 @@ export const Container = styled.section`
   background-color: white;
 `;
 
-export const Title = styled.h2`
+export const StatTitle = styled.h2`
   margin-bottom: 30px;
   font-size: 28px;
   font-weight: 500;
