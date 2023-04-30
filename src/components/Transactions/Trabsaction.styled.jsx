@@ -26,7 +26,7 @@ export const TableData = styled.td`
   color: ${props => props.theme.colors.userTextColor};
 `;
 
-export const TableBody = styled.tbody`
+export const TableRow = styled.tr`
   &:nth-of-type(2n -1) {
     background-color: ${props => props.theme.colors.tableBodyOddBgColor};
   }

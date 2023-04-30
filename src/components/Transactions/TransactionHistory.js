@@ -3,7 +3,8 @@ import {
   TransactionHistoryTable,
   TransactionHead,
   TableHeader,
-  TableBody,
+  // TableBody,
+  TableRow,
   TableData,
 } from './Trabsaction.styled';
 
@@ -17,15 +18,15 @@ export const TransactionHistory = ({ items }) => {
           <TableHeader>Currency</TableHeader>
         </tr>
       </TransactionHead>
-      {items.map(({ id, type, amount, currency }) => (
-        <TableBody key={id}>
-          <tr>
+      <tbody>
+        {items.map(({ id, type, amount, currency }) => (
+          <TableRow key={id}>
             <TableData>{type}</TableData>
             <TableData>{amount}</TableData>
             <TableData>{currency}</TableData>
-          </tr>
-        </TableBody>
-      ))}
+          </TableRow>
+        ))}
+      </tbody>
     </TransactionHistoryTable>
   );
 };
